@@ -1,0 +1,290 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/location.md'
+        label: 'Location'
+        name: 'location'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'location',
+            }
+          - {
+              label: Location Image,
+              name: location_image,
+              widget: object,
+              fields:
+                [
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'index'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'home-page',
+            }
+          - { label: Announcement, name: announcement, widget: string }
+          - {
+              label: Contact Card,
+              name: contact_card,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Phone Number, name: phone_number, widget: string },
+                ],
+            }
+          - {
+              label: Hero Image,
+              name: hero_image,
+              widget: object,
+              fields:
+                [
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+          - { label: Banner Heading, name: banner_heading, widget: string }
+          - { label: Banner Subtext, name: banner_subtext, widget: string }
+          - {
+              label: Hero Pitch Heading,
+              name: hero_pitch_heading,
+              widget: string,
+            }
+          - {
+              label: Hero Pitch Subtext,
+              name: hero_pitch_subtext,
+              widget: string,
+            }
+          - {
+              label: Slider Images,
+              name: slider_images,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Image1,
+                    name: slider_image1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image2,
+                    name: slider_image2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image3,
+                    name: slider_image3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image4,
+                    name: slider_image4,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image5,
+                    name: slider_image5,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image6,
+                    name: slider_image6,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image7,
+                    name: slider_image7,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                  {
+                    label: Image8,
+                    name: slider_image8,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Description, name: description, widget: text },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Service Cards,
+              name: service_cards,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Card1,
+                    name: card1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Subtext, name: subtext, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Description,
+                                name: description,
+                                widget: text,
+                              },
+                              {
+                                label: 'Card 1 Image',
+                                name: image,
+                                widget: image,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Card2,
+                    name: card2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Subtext, name: subtext, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Description,
+                                name: description,
+                                widget: text,
+                              },
+                              {
+                                label: 'Card 2 Image',
+                                name: image,
+                                widget: image,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Card3,
+                    name: card3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Subtext, name: subtext, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Description,
+                                name: description,
+                                widget: text,
+                              },
+                              {
+                                label: 'Card 3 Image',
+                                name: image,
+                                widget: image,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: Card4,
+                    name: card4,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Heading, name: heading, widget: string },
+                        { label: Subtext, name: subtext, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Description,
+                                name: description,
+                                widget: text,
+                              },
+                              {
+                                label: 'Card 4 Image',
+                                name: image,
+                                widget: image,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
