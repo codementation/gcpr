@@ -10,8 +10,8 @@ import Hero from '../components/hero';
 import GoogleOpeningHours from '../components/googleOpeningHours';
 import ContactCard from '../components/contactCard';
 import GooglePlaceReviews from '../components/googlePlaceReviews';
-//import SwiperTemplate from '../components/swiper';
-//import ServiceCardsTemplate from '../components/serviceCards';
+import ServiceCards from '../components/serviceCards';
+import ImageCarousel from '../components/imageCarousel';
 
 export default function HomePage({ data }) {
   console.log(data);
@@ -39,6 +39,10 @@ export default function HomePage({ data }) {
           </div>
         </div>
         <GooglePlaceReviews googleReviewData={googlePlacesPlace} />
+        <div className="flex flex-col self-center md:w-9/12">
+            <ServiceCards props={frontmatter.service_cards} />
+        </div>
+        <ImageCarousel images={frontmatter.carousel_images} />
       </Layout>
     </>
   );
@@ -56,10 +60,6 @@ HomePage.propTypes = {
   }),
 };
 
-// <div className="flex flex-col self-center md:w-9/12">
-//     <ServiceCardsTemplate props={frontmatter.service_cards} />
-// </div>
-// <SwiperTemplate slider_images={frontmatter.slider_images} />
 export const pageQuery = graphql`
   query {
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
@@ -132,7 +132,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        slider_images {
+        carousel_images {
           slider_image1 {
             description
             image {

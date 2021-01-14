@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ServiceCardsTemplate = ({ props }) => {
+export default function ServiceCards ({ props }) {
   const cards = Object.values(props).map((card) => (
     <div
       key={card}
@@ -35,8 +35,7 @@ const ServiceCardsTemplate = ({ props }) => {
   );
 };
 
-ServiceCardsTemplate.propTypes = {
+ServiceCards.propTypes = {
   props: PropTypes.object,
 };
 
-export default ServiceCardsTemplate;
