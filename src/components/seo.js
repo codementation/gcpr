@@ -1,21 +1,32 @@
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { JsonLd } from './jsonLd';
 
 function SEO({ description, lang, meta, keywords, title }) {
-    const { site } = useStaticQuery(graphql`
-        query DefaultSEOQuery {
-            site {
-                siteMetadata {
-                    title
-                    description
-                    author
-                }
-            }
-        }
-    `);
+    
+   // TODO:  Static Queries are blocked by:
+   // https://github.com/slorber/gatsby-plugin-react-native-web/issues/52
+   // const { site } = useStaticQuery(graphql`
+   //     query DefaultSEOQuery {
+   //         site {
+   //             siteMetadata {
+   //                 title
+   //                 description
+   //                 author
+   //             }
+   //         }
+   //     }
+   // `);
+
+    const site = {
+      siteMetadata: {
+        title:  "Gulf Coast Phone Repair",
+        description: "We repair phones and tablets cracked screens and batteries",
+        author: "codementation.com",
+      }
+    }
 
     const metaDescription = description || site.siteMetadata.description;
 

@@ -7,16 +7,16 @@ import SEO from '../components/seo';
 import Announcement from '../components/announcement';
 import NavBar from '../components/navBar';
 import Hero from '../components/hero';
+import GoogleOpeningHours from '../components/googleOpeningHours';
+import ContactCard from '../components/contactCard';
+import GooglePlaceReviews from '../components/googlePlaceReviews';
 //import SwiperTemplate from '../components/swiper';
-//import GooglePlaceReviews from '../components/googlePlaceReviews';
-//import GoogleOpeningHours from '../components/googleOpeningHours';
-//import { ContactCardTemplate } from '../components/contactCard';
 //import ServiceCardsTemplate from '../components/serviceCards';
 
 export default function HomePage({ data }) {
   console.log(data);
   const { frontmatter } = data.markdownRemark;
-  //const { googlePlacesPlace } = data;
+  const { googlePlacesPlace } = data;
   return (
     <>
       <SEO title="home" />
@@ -30,6 +30,15 @@ export default function HomePage({ data }) {
           hero_pitch_heading={frontmatter.hero_pitch_heading}
           hero_pitch_subtext={frontmatter.hero_pitch_subtext}
         />
+        <div className="flex flex-row flex-wrap mt-5 place-content-center">
+          <div className="mx-3 md:w-1/3">
+            <GoogleOpeningHours hours={googlePlacesPlace.opening_hours} />
+          </div>
+          <div className="mx-3 xxs:mt-10 sm:mt-0 md:w-1/3 place-content-center">
+            <ContactCard props={frontmatter.contact_card} />
+          </div>
+        </div>
+        <GooglePlaceReviews googleReviewData={googlePlacesPlace} />
       </Layout>
     </>
   );
@@ -47,6 +56,10 @@ HomePage.propTypes = {
   }),
 };
 
+// <div className="flex flex-col self-center md:w-9/12">
+//     <ServiceCardsTemplate props={frontmatter.service_cards} />
+// </div>
+// <SwiperTemplate slider_images={frontmatter.slider_images} />
 export const pageQuery = graphql`
   query {
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
@@ -232,18 +245,3 @@ export const pageQuery = graphql`
   }
 `;
 
-// <div className="flex flex-row flex-wrap mt-5 place-content-center">
-//     <div className="mx-3 md:w-1/3">
-//         <GoogleOpeningHours
-//             hours={googlePlacesPlace.opening_hours}
-//         />
-//     </div>
-//     <div className="mx-3 xxs:mt-10 sm:mt-0 md:w-1/3 place-content-center">
-//         <ContactCardTemplate props={frontmatter.contact_card} />
-//     </div>
-// </div>
-// <GooglePlaceReviews googleReviewData={googlePlacesPlace} />
-// <div className="flex flex-col self-center md:w-9/12">
-//     <ServiceCardsTemplate props={frontmatter.service_cards} />
-// </div>
-// <SwiperTemplate slider_images={frontmatter.slider_images} />

@@ -54,6 +54,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-react-native-web`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
