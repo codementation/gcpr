@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import "../styles/global.css"
+import '../styles/global.css';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Announcement from '../components/announcement';
 import NavBar from '../components/navBar';
+import Hero from '../components/hero';
 //import SwiperTemplate from '../components/swiper';
 //import GooglePlaceReviews from '../components/googlePlaceReviews';
 //import GoogleOpeningHours from '../components/googleOpeningHours';
@@ -22,6 +23,13 @@ export default function HomePage({ data }) {
       <Layout>
         <Announcement announcement={frontmatter.announcement} />
         <NavBar />
+        <Hero
+          image={frontmatter.hero_image}
+          banner_heading={frontmatter.banner_heading}
+          banner_subtext={frontmatter.banner_subtext}
+          hero_pitch_heading={frontmatter.hero_pitch_heading}
+          hero_pitch_subtext={frontmatter.hero_pitch_subtext}
+        />
       </Layout>
     </>
   );
@@ -224,13 +232,6 @@ export const pageQuery = graphql`
   }
 `;
 
-// <HomePageTemplate
-//     image={frontmatter.hero_image}
-//     banner_heading={frontmatter.banner_heading}
-//     banner_subtext={frontmatter.banner_subtext}
-//     hero_pitch_heading={frontmatter.hero_pitch_heading}
-//     hero_pitch_subtext={frontmatter.hero_pitch_subtext}
-// />
 // <div className="flex flex-row flex-wrap mt-5 place-content-center">
 //     <div className="mx-3 md:w-1/3">
 //         <GoogleOpeningHours
