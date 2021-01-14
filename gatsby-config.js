@@ -1,3 +1,9 @@
+const tailwindConfig = require('./tailwind.config.js');
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gulf Coast Phone Repair`,
@@ -76,6 +82,18 @@ module.exports = {
         rule: {
           include: `${__dirname}/src/images/vector`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`)(tailwindConfig),
+          require(`autoprefixer`),
+          ...(process.env.NODE_ENV === `production`
+            ? [require(`cssnano`)]
+            : []),
+        ],
       },
     },
   ],
