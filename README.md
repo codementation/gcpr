@@ -1,48 +1,63 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Website for GCPR
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+## This site uses the following technologies:
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+- [Gatsby](https://www.gatsbyjs.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [NetlifyCMS](https://www.netlifycms.org/)
+- [Google Places API](https://cloud.google.com/maps-platform/places/)
+- [Google Maps API](https://cloud.google.com/maps-platform/)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Deployment pipeline
 
-2.  **Start developing.**
+We use a Git-based workflow that auto builds on updates to the *Master* branch
 
-    Navigate into your new site’s directory and start it up.
+The site is hosted on [Netlify's](https://www.netlify.com/) CDN
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## License
 
-3.  **Open the code and start customizing!**
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Project Layout
+```
+src/
+├── cms
+│   ├── cms.js
+│   └── preview-templates
+│       └── HomePagePreview.js
+├── components
+│   ├── announcement.js
+│   ├── contactCard.js
+│   ├── googleMap.js
+│   ├── googleOpeningHours.js
+│   ├── googlePlaceReviews.js
+│   ├── jsonLd.js
+│   ├── layout.js
+│   ├── locationCard.js
+│   ├── navBar.js
+│   ├── seo.js
+│   ├── serviceCards.js
+│   ├── starRating.js
+│   └── swiper.js
+├── favicon.png
+├── images
+│   ├── abduction-illustration.svg
+│   ├── cat-and-human-illustration.svg
+│   ├── dog-illustration.svg
+│   ├── GCPR-768x381.jpg
+│   ├── GCPR.jpg
+│   ├── tailwind-icon.png
+│   └── vector
+│       ├── facebookLogo.svg
+│       └── googleLogo.svg
+├── pages
+│   ├── 404.js
+│   ├── index.md
+│   └── location.md
+├── styles
+│   └── global.css
+└── templates
+    ├── home-page.js
+    └── location.js
+```
