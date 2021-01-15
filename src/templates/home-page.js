@@ -14,11 +14,10 @@ import ServiceCards from '../components/serviceCards';
 import ImageCarousel from '../components/imageCarousel';
 
 export default function HomePage({ data }) {
-  console.log(data);
   const { frontmatter } = data.markdownRemark;
   const { googlePlacesPlace } = data;
   return (
-    <>
+    <React.Fragment>
       <SEO title="home" />
       <Layout>
         <Announcement announcement={frontmatter.announcement} />
@@ -44,7 +43,7 @@ export default function HomePage({ data }) {
         </div>
         <ImageCarousel images={frontmatter.carousel_images} />
       </Layout>
-    </>
+    </React.Fragment>
   );
 }
 

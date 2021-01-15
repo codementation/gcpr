@@ -1,8 +1,10 @@
-require('typeface-roboto');
-require('./src/styles/global.css');
-const fetch = require('node-fetch');
+import { wrapRootElement } from "./src/components/wrapRootElement"
+import fetch from 'node-fetch';
+import 'typeface-roboto';
+import './src/styles/global.css';
 
-export const onRouteUpdate = ({ location }) => {
+
+const onRouteUpdate = ({ location }) => {
     if (
         (document.readyState === 'interactive' ||
             document.readyState === 'complete') &&
@@ -30,3 +32,5 @@ export const onRouteUpdate = ({ location }) => {
             });
     }
 };
+
+export { onRouteUpdate, wrapRootElement  }

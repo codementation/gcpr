@@ -17,7 +17,6 @@ export default function ContactCard ({ props }) {
         } else {
             phoneNumber = `telprompt:${phone_number}`;
         }
-        console.log(phoneNumber)
 
         Linking.openURL(phoneNumber);
     }

@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import  fetch from 'node-fetch';
 
 const handler = async function () {
       try {
@@ -26,4 +26,4 @@ const handler = async function () {
       }
 };
 
-module.exports = { handler };
+export default handler;

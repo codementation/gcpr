@@ -1,10 +1,22 @@
 const tailwindConfig = require('./tailwind.config.js');
+const { createProxyMiddleware } = require("http-proxy-middleware")
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      createProxyMiddleware({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: `Gulf Coast Phone Repair`,
     description: `We repair phones and tablets cracked screens and batteries`,
@@ -119,6 +131,12 @@ module.exports = {
         placeIds: [`${process.env.GATSBY_GOOGLE_PLACE_ID}`],
         apiKey: process.env.GATSBY_GOOGLE_API_KEY,
         language: 'en-US',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {

@@ -81,8 +81,8 @@ collections:
               widget: string,
             }
           - {
-              label: Slider Images,
-              name: slider_images,
+              label: Image Carousel Images,
+              name: carousel_images,
               widget: object,
               fields:
                 [
