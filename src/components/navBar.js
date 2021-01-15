@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
-import logo from '../images/raster/GCPR-768x381.jpg';
+import Logo from '../images/vector/GCPR-logo.svg';
 
 export default function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -9,11 +9,9 @@ export default function NavBar() {
     <header>
       <div className="flex flex-row flex-wrap items-center justify-between p-4 mx-auto 2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl md:max-w-3xl">
           <Link to="/">
-            <img
-              src={logo}
-              alt="Gulf Coast Phone Repair"
+            <Logo
               className="2xl:h-24 xl:h-22 lg:h-20 md:h-16 sm:h-14 xs:h-12 xxs:h-16"
-            ></img>
+            />
           </Link>
           <button
             className="items-center block px-3 py-2 focus:outline-none md:hidden"
