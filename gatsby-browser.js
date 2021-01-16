@@ -17,6 +17,7 @@ const onRouteUpdate = ({ location }) => {
         })
             .then((response) => response.text())
             .then((data) => {
+                console.log(data)
                 const json = JSON.parse(data);
                 const open_now = json.msg.result.opening_hours.open_now;
                 if (open_now === true) {

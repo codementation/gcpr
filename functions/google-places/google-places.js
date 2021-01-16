@@ -1,6 +1,6 @@
-import  fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
-const handler = async function () {
+exports.handler = async function () {
       try {
         const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${process.env.GATSBY_GOOGLE_PLACE_ID}&fields=opening_hours&key=${process.env.GATSBY_GOOGLE_API_KEY}`, {
           headers: { Accept: 'application/json' },
@@ -26,4 +26,3 @@ const handler = async function () {
       }
 };
 
-export default handler;
