@@ -13,7 +13,7 @@ banner_heading: Need your device Repaired today?
 banner_subtext: "Come by and most phones and tablets can be fixed while you
   wait, or drop it off while you go to the beach! "
 hero_pitch_heading: We are able to fix any phone or tablet!
-slider_images:
+carousel_images:
   slider_image1:
     description: ipad pro
     image: /img/1_ipad-pro-12-select-wifi-spacegray-202003_fmt_whh.png
