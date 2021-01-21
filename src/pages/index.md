@@ -21,8 +21,8 @@ carousel_images:
     image: /img/0_st_ecom_large.png
     description: iphone 11 pro max
   slider_image3:
-    image: /img/3_iphone-xs-max_gold-1.png
-    description: iphone xs max gold
+    image: /img/cracked-iphone.png
+    description: iphone se cracked
   slider_image4:
     image: /img/2_6395750cv11d.jpg
     description: Samsung galaxy s20 ultra
