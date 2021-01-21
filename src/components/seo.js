@@ -112,6 +112,7 @@ SEO.defaultProps = {
         'surface',
         'ipad',
         'iwatch',
+        'applewatch',
     ],
     meta: [],
 };
