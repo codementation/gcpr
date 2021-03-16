@@ -44,7 +44,7 @@ export default function NavBar() {
               ].map((link) => (
                 <li key={link.title} className="inline-block px-2 align-middle">
                   <Link
-                    className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6 focus:text-gcpr_green hover:text-gcpr_green before:empty-content before:h-2 before:bg-gcpr_green before:block before:-bottom-40 before:relative before:scaleX-0 hover_before:scaleX-1"
+                    className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6 focus:text-gcpr_green hover:text-gcpr_green before:empty-content before:h-2 before:bg-gcpr_green before:block before:top-10 before:relative before:scaleX-0 hover_before:scaleX-1"
                     to={link.route}
                     activeClassName="text-gcpr_green"
                   >
