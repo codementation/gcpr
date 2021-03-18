@@ -1,0 +1,77 @@
+<svg
+    version="1.1"
+    viewBox="0 0 211.67 158.75"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+ <defs>
+  <linearGradient
+            id="b"
+            x1="409.06"
+            x2="1428.9"
+            y1="-42.787"
+            y2="684.66"
+            gradientTransform="matrix(.20626 0 0 .15278 -279.44 91.949)"
+            gradientUnits="userSpaceOnUse"
+            xlink:href="#a"
+        />
+  <linearGradient id="a">
+   <stop style="stop-color:#f9fcf0" offset="0" />
+   <stop style="stop-color:#d9e8ce" offset="1" />
+  </linearGradient>
+  <linearGradient
+            id="c"
+            x1="409.06"
+            x2="1433.1"
+            y1="477.55"
+            y2="477.55"
+            gradientTransform="matrix(.20626 0 0 .15263 -279.45 92.101)"
+            gradientUnits="userSpaceOnUse"
+            xlink:href="#a"
+        />
+  <linearGradient
+            id="d"
+            x1="-934.26"
+            x2="-389.22"
+            y1="-21.031"
+            y2="-72.908"
+            gradientTransform="matrix(.40201 0 0 .37743 107.5 121.56)"
+            gradientUnits="userSpaceOnUse"
+        >
+   <stop style="stop-color:#d9e8ce" offset="0" />
+   <stop style="stop-color:#f5f7f4" offset="1" />
+  </linearGradient>
+  <linearGradient
+            id="e"
+            x1="-797.2"
+            x2="-210.86"
+            y1="-38.055"
+            y2="-71.944"
+            gradientTransform="matrix(-.40578 0 0 -.77593 -288.77 170.47)"
+            gradientUnits="userSpaceOnUse"
+            xlink:href="#a"
+        />
+ </defs>
+ <g transform="translate(195.08 -85.626)">
+  <path
+            d="m-195 85.626h211.58v158.72h-211.58v-158.72z"
+            style="fill-rule:evenodd;fill:#e8f3df;paint-order:stroke markers fill;stop-color:#000000"
+        />
+  <path
+            d="m-195 244.35h211.57c0-52.908 0.01-105.82 0.01-158.72-70.527 52.908-141.05 105.82-211.58 158.72z"
+            style="fill-rule:evenodd;fill:url(#b);font-variation-settings:'wght' 600;paint-order:stroke markers fill;stop-color:#000000"
+        />
+  <path
+            d="m16.582 85.771c-70.527-0.048-141.05-0.096-211.58-0.1445v158.72c70.527-52.859 141.05-105.72 211.58-158.58z"
+            style="fill-rule:evenodd;fill:url(#c);font-variation-settings:'wght' 600;paint-order:stroke markers fill;stop-color:#000000"
+        />
+  <path
+            d="m-195.01 85.626c70.502 0.025 141 0.049 211.51 0.074-70.527 16.008-141.05 32.015-211.58 48.023 0.025-16.032 0.051-32.065 0.076-48.097z"
+            style="fill-rule:evenodd;fill:url(#d);font-variation-settings:'wght' 600;paint-order:stroke markers fill;stop-color:#000000"
+        />
+  <path
+            d="m16.574 244.35c-70.527 0.01-141.05 0.018-211.58 0.027 70.389-32.734 140.78-65.469 211.17-98.203 0.1376 32.725 0.2754 65.45 0.4131 98.176z"
+            style="fill-rule:evenodd;fill:url(#e);font-variation-settings:'wght' 600;paint-order:stroke markers fill;stop-color:#000000"
+        />
+ </g>
+</svg>
