@@ -1,6 +1,7 @@
 local_backend: true
 
 backend:
+  # name: test-repo
   name: git-gateway
   branch: master
   commit_messages:
@@ -9,6 +10,8 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
+  local_backend:
+    url: http://localhost:8082/api/v1
 
 media_folder: static/img
 public_folder: /img
@@ -35,6 +38,54 @@ collections:
                 [
                   { label: Description, name: description, widget: text },
                   { label: Image, name: image, widget: image },
+                ],
+            }
+      - file: 'src/pages/forensics.md'
+        label: 'Forensics'
+        name: 'forensics'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'forensics',
+            }
+          - {
+              label: Forensics,
+              name: content,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: 'Section 1',
+                    name: section1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: text },
+                        { label: Body, name: body, widget: markdown },
+                      ],
+                  },
+                  {
+                    label: 'Section 2',
+                    name: section2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: text },
+                        { label: Body, name: body, widget: markdown },
+                      ],
+                  },
+                  {
+                    label: 'Section 3',
+                    name: section3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: text },
+                        { label: Body, name: body, widget: markdown },
+                      ],
+                  },
                 ],
             }
       - file: 'src/pages/index.md'
