@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Logo from '../images/vector/GCPR-logo.svg';
 
 export default function NavBar() {
+  // For controlling hamburger state
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -35,7 +36,11 @@ export default function NavBar() {
               {[
                 {
                   route: `/`,
-                  title: `Home`,
+                  title: `home`,
+                },
+                {
+                  route: `/forensics`,
+                  title: `Forensics`,
                 },
                 {
                   route: `/location`,

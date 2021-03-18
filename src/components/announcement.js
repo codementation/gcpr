@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Announcement({ announcement }) {
   return (
-    <div className="flex flex-row flex-wrap w-full pt-2 pb-1 bg-gray-800 place-content-center">
+    <div className="flex flex-row flex-wrap w-full pt-2 pb-1 bg-cover bg-matrix_green-800 place-content-center">
       <div>
         <FontAwesomeIcon
           icon={faBullhorn}
