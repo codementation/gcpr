@@ -36,7 +36,7 @@ export default function NavBar() {
               {[
                 {
                   route: `/`,
-                  title: `home`,
+                  title: `Home`,
                 },
                 {
                   route: `/forensics`,
