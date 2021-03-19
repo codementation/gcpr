@@ -11,7 +11,7 @@
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",
     "generate-admin-css": "npx tailwindcss build ./src/styles/global.css -o ./public/admin/main.css",
-    "build": "yarn generate-admin-css && gatsby build",
+    "build": "gatsby build && yarn generate-admin-css",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
