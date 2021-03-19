@@ -10,7 +10,8 @@
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "generate-admin-css": "npx tailwindcss build ./src/styles/global.css -o ./public/admin/main.css",
+    "build": "yarn generate-admin-css && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
